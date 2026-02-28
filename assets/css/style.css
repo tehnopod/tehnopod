@@ -35,17 +35,15 @@ img{max-width:100%; display:block}
   gap:18px;
   padding:18px 0;
 }
-.brand{
-  display:flex; align-items:center; gap:12px;
-  color:#fff;
-  font-weight:900;
-  letter-spacing:.08em;
-  text-transform:uppercase;
+brand{
+  display:flex;
+  align-items:center;
 }
-.brand .mark{
-  width:40px; height:20px; border-radius:4px;
-  background: linear-gradient(90deg, var(--green), #b9ff3d);
-  box-shadow: 0 10px 22px rgba(0,0,0,.25);
+
+.logo{
+  height:72px;   
+  width:auto;
+  display:block;
 }
 
 .menu{
