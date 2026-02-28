@@ -35,7 +35,7 @@ img{max-width:100%; display:block}
   gap:18px;
   padding:18px 0;
 }
-brand{
+.brand{
   display:flex;
   align-items:center;
 }
