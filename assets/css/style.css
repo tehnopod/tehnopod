@@ -61,7 +61,7 @@ img{max-width:100%; display:block}
 
 /* ✅ If you use an <img class="logo" ...> inside .brand */
 .logo{
-  height:34px;       /* good size for the black bar */
+  height:72px;       /* good size for the black bar */
   width:auto;
   display:block;
 }
