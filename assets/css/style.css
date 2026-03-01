@@ -61,7 +61,7 @@ img{max-width:100%; display:block}
 
 /* Logo image inside .brand */
 .logo{
-  height:36px;     /* ✅ fits black bar nicely */
+  height:72px;     /* ✅ fits black bar nicely */
   width:auto;
   display:block;
   object-fit:contain;
