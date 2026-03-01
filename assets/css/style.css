@@ -1,8 +1,8 @@
 /* =========================
    FONTS (Cera Pro woff2)
-   Put your woff2 files in: assets/fonts/
-   This CSS file is in: assets/css/style.css
-   So font path is: ../fonts/...
+   Folder: assets/fonts/
+   CSS:    assets/css/style.css
+   Path:   ../fonts/...
 ========================= */
 
 @font-face{
@@ -76,7 +76,7 @@
 html,body{height:100%}
 body{
   margin:0;
-  font-family: "Cera Pro", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  font-family:"Cera Pro", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
   color:var(--text);
   background:var(--bg);
 }
@@ -89,6 +89,8 @@ img{max-width:100%; display:block}
   margin:0 auto;
   padding:0 22px;
 }
+
+.green{ color: var(--green); }
 
 /* =========================
    TOP NAV
@@ -118,7 +120,6 @@ img{max-width:100%; display:block}
   text-transform:uppercase;
 }
 
-/* if you still use mark */
 .brand .mark{
   width:40px;
   height:20px;
@@ -153,9 +154,8 @@ img{max-width:100%; display:block}
   border:0;
   background:transparent;
   cursor:pointer;
-  font-family: "Cera Pro", system-ui, sans-serif;
+  font-family:"Cera Pro", system-ui, sans-serif;
 }
-
 .menu a:hover,
 .menu button:hover{opacity:1}
 
@@ -177,7 +177,7 @@ img{max-width:100%; display:block}
   letter-spacing:.08em;
   text-transform:uppercase;
   cursor:pointer;
-  font-family: "Cera Pro", system-ui, sans-serif;
+  font-family:"Cera Pro", system-ui, sans-serif;
 }
 
 .mobile{
@@ -224,7 +224,7 @@ img{max-width:100%; display:block}
   border:1px solid var(--line);
   border-radius:14px;
   padding:10px;
-  box-shadow: 0 18px 45px rgba(0,0,0,.12);
+  box-shadow:0 18px 45px rgba(0,0,0,.12);
   display:none;
   z-index:60;
 }
@@ -282,14 +282,20 @@ img{max-width:100%; display:block}
 }
 .btn.primary:hover{filter:brightness(.98)}
 
+/* Buttons that sit on dark hero */
+.btn.invert{
+  background:transparent;
+  border:2px solid rgba(255,255,255,.85);
+  color:#fff;
+}
+.btn.invert:hover{
+  background:#fff;
+  color:#000;
+  border-color:#fff;
+}
+
 /* =========================
    HERO 1 – TRUE CROSSFADE
-   Requires HTML:
-   <section class="hero1">
-     <div class="hero-bg is-active"></div>
-     <div class="hero-bg"></div>
-     <div class="hero1-overlay">...</div>
-   </section>
 ========================= */
 .hero1{
   position:relative;
@@ -313,9 +319,7 @@ img{max-width:100%; display:block}
   transform:scale(1.03);
   will-change:opacity;
 }
-.hero1 .hero-bg.is-active{
-  opacity:1;
-}
+.hero1 .hero-bg.is-active{ opacity:1; }
 
 /* overlay & content */
 .hero1-overlay{
@@ -333,36 +337,55 @@ img{max-width:100%; display:block}
   align-items:center;
 }
 
-/* ✅ move content a bit left (not centered in the middle) */
-.hero1-overlay .container{
-  margin-left:0;           /* keeps it from feeling centered */
-}
+/* left align */
 .hero1-content{
   color:#fff;
-  max-width:780px;
-  padding-left:8px;        /* small nudge */
+  max-width:820px;
+  text-align:left;
+  padding-left:6px; /* tiny nudge left */
+}
+
+/* TehnoPod bigger */
+.hero-brand{
+  display:block;
+  font-weight:900;
+  letter-spacing:-.02em;
+  text-transform:none;
+  font-size: clamp(44px, 5.4vw, 86px);
+  line-height:1.02;
+  color:var(--green);
 }
 
 .hero1-title{
-  font-family:"Cera Pro", system-ui, sans-serif;
-  font-weight:900;         /* “Black” look */
-  font-size: clamp(34px, 4.8vw, 64px);
-  line-height:1.05;
-  margin:0 0 18px;
-  text-transform:uppercase;
-  letter-spacing:-.02em;
+  margin:0 0 14px;
 }
 
-.hero1-title .g{ color: var(--green); }
+/* next line(s) */
+.hero1-line{
+  margin:0;
+  text-transform:none;
+  letter-spacing:-.01em;
+}
+.hero1-line-1{
+  margin-top:2px;
+  font-weight:700;
+  font-size: clamp(18px, 2.2vw, 32px);
+  line-height:1.15;
+}
+.hero1-line-2{
+  margin-top:10px;
+  font-weight:700;
+  font-size: clamp(16px, 1.7vw, 24px);
+  line-height:1.25;
+}
 
-.hero1-sub{
-  font-family:"Cera Pro", system-ui, sans-serif;
+/* slogan italic and a bit different */
+.hero1-tagline{
+  margin:14px 0 26px;
+  font-style:italic;
   font-weight:400;
-  font-size: clamp(14px, 1.3vw, 18px);
   opacity:.92;
-  margin:0 0 26px;
-  line-height:1.7;
-  max-width:60ch;
+  font-size: clamp(14px, 1.2vw, 18px);
 }
 
 .hero1-actions{
