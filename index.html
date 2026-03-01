@@ -14,8 +14,8 @@
   <div class="container">
     <div class="nav">
       <a class="brand" href="index.html">
-  <img src="assets/img/logotehnopod.png" alt="TehnoPod logo" class="logo">
-</a>
+        <img src="assets/img/logotehnopod.png" alt="TehnoPod logo" class="logo">
+      </a>
 
       <nav class="menu" aria-label="Main navigation">
         <a href="about.html">About us</a>
@@ -71,8 +71,12 @@
 </header>
 
 <main>
-  <!-- HERO 1 (FULL-WIDTH IMAGE) -->
+  <!-- HERO 1 (CROSSFADE SLIDER) -->
   <section class="hero1">
+    <!-- ✅ two layers for true crossfade -->
+    <div class="hero-bg is-active"></div>
+    <div class="hero-bg"></div>
+
     <div class="hero1-overlay">
       <div class="container hero1-content">
         <h1 class="hero1-title">
@@ -87,8 +91,8 @@
 
         <div class="hero1-actions">
           <a class="btn primary" href="contact.html">Get a quote</a>
-          <a class="btn" href="gym-flooring.html">Gym flooring</a>
-          <a class="btn" href="industrial-floors.html">Industrial floors</a>
+          <a class="btn invert" href="gym-flooring.html">Gym flooring</a>
+          <a class="btn invert" href="industrial-floors.html">Industrial floors</a>
         </div>
       </div>
     </div>
